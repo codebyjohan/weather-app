@@ -12,7 +12,7 @@
 	let sunrise = $derived(weatherInfo ? formatUnixTime(weatherInfo.sys.sunrise) : '');
 	let sunset = $derived(weatherInfo ? formatUnixTime(weatherInfo.sys.sunset) : '');
 
-	const handleSubmit = async (e: SubmitEvent) => {
+	const handleSubmit = (e: SubmitEvent) => {
 		e.preventDefault();
 		if (city.trim().length === 0) {
 			return;
